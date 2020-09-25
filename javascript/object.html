@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Object</title>
+    <script>
+        var person = {
+            age:5000,
+            num:60,
+            height:180
+        };
+
+        // alert(person.height);
+
+        // var cat = {
+        //     name:cat,
+        //     'fer-color':'yello-white'
+        // };
+
+        // alert(cat['fer-color']);
+        // //访问对象不存在的属性时,浏览器不会报错,而是返回undefined
+
+        for(var i in person)
+        {
+            alert(`${i} ${person[i]}`);
+        }
+
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
