@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>方法</title>
+
+    <script>
+        /*
+        var xiaoming = {
+            name:'小明',
+            birth:1998,
+            age:function (){
+                var y = new Date().getFullYear();
+                return y - this.birth;
+            }
+        };
+
+        console.log(xiaoming.age);
+        console.log(xiaoming.age());
+        */
+
+        /*
+        function getAge()
+        {
+            var y = new Date().getFullYear();
+            return y - this.birth;
+        }
+
+        var lingyin = {
+            name:'lingyin',
+            birth:1998,
+            age:getAge
+        }
+
+        console.log(lingyin.age());
+
+        console.log(getAge.apply(lingyin,[]));
+        */
+
+        //使用apply还可以实现装饰器
+
+        var count = 0;
+        var oldParseInt = parseInt; //保存原函数
+
+        //实现新的功能
+        window.parseInt = function (){
+            count += 1;
+            return oldParseInt.apply(null,arguments);
+        }
+
+        parseInt("10");
+        parseInt("10");
+        parseInt("10");
+        alert(count);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

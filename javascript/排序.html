@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>排序</title>
+
+    <script>
+        //sort默认按照ASCII的大小排序
+
+        //对数字排序
+
+        //sort操作直接对当前数组进行修改
+        var arr = [1,2,5,6,7,4,9];
+        arr.sort((x,y)=>{
+            if(x > y){
+                return 1;
+            }
+            if(x < y){
+                return -1;
+            }
+            return 0;
+
+        });
+
+        alert(arr);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

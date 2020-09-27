@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高阶函数</title>
+
+    <script>
+        //高阶函数,即函数可以作为参数传入
+
+        // function abs(x,y,f){
+            // return f(x) + f(y);
+        // }
+// 
+        // var x = -3;
+        // var y = 9;
+        // alert(abs(x,y,Math.abs));
+
+        //map方法,和python一样
+        //map是数组的一个方法
+        /*
+        function pow(x)
+        {
+            return x*x;
+        }
+
+        var arr = [1,2,3,4,5,6,7,8,9];
+        var results = arr.map(pow);
+        alert(results);
+
+        alert(arr.map(String));
+        */
+
+        //累积操作
+        /*
+        var f = function (x,y){
+            return x * y;
+        }
+
+        var arr = [1,2,3,4,5,6,7,8,9];
+        var results = arr.reduce(f);
+        alert(results);
+
+        /*
+        匿名函数:inputs=>outputs
+
+        (x,y)=>(x*10 + y)
+        */
+
+        var s = ['lvwenchao'];
+        alert(s.map(name=>name.toUpperCase()));
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

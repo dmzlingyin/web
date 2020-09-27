@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>变量作用域</title>
+
+    <script>
+
+        // // 严格遵守:在函数内部首先申明所有变量
+        // function foo(){
+        //     var x = 'Hello' + y;
+        //     console.log(x);
+        //     var y = Bob;
+
+        // }
+
+        // foo();
+/*
+        function f()
+        {
+            for(var i=0;i<100;i++)
+            {
+                //do nothing
+            }
+
+            i += 10;
+            alert(i);
+        }
+        f();
+
+        function f()
+        {
+            //let可以进一步缩小变量的作用域
+            for(let i=0;i<100;i++)
+            {
+                //do nothing
+            }
+
+            i += 10;
+            alert(i);
+        }
+        f();
+*/
+
+        //解构赋值
+        // var [x,y,z] = ['hello','world','shit'];
+        // alert(x + y + z);
+
+        //对象的解构赋值,用来获取对象属性
+        var person = {
+            name:'lingyin',
+            gender:'male',
+            age:22,
+
+            address:{
+                city:'BeiJing',
+                srteet:'ChangAn street',
+                zipcode:'100001'
+            }
+        };
+
+        //需要显示的指明嵌套
+        // var {name,gender,address:{city,zipcode}} = person;
+        // console.log(name,gender,city,zipcode);
+
+        function buildDate({year,month,day,hour=0,minute=0,second=0})
+        {
+            return new Date(year + '-' + month + '-' + day + ' ' + hour + ':' + minute + ':' + second);
+        }
+
+        date = buildDate({year:2020,month:9,day:27});
+        alert(date);
+    </script>
+</head>
+<body>
+    
+</body>
+</html>
