@@ -1,0 +1,31 @@
+a {
+    text-decoration:none;
+}
+
+body {
+    font: 16px/28px "Microsoft YaHei";
+}
+
+h1 {
+    text-align: center;
+    font-weight: 400;
+}
+
+.gray {
+    text-align:center;
+    color: #888888;
+}
+
+.search {
+    color: #666;
+}
+
+p {
+    /* 首行缩进两个字符 */
+    text-indent: 2em;
+}
+
+.pic {
+    /* 想要图片居中,需要将他的父标签p 设置居中 */
+    text-align: center;
+}
