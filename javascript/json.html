@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>JSON的使用</title>
+
+    <script>
+        "use strict";
+
+        var lingyin = {
+            name:"lingyin",
+            age:22,
+            gender:"male",
+            university:"Hebei University of Science And Techonology"
+        };
+
+        var s = JSON.stringify(lingyin);
+        console.log(s);
+
+        //加上参数,按照缩进输出
+        //第二个参数用来控制筛选条件.null为全部输出.
+        console.log(JSON.stringify(lingyin,null," "));
+
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

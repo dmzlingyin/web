@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>面向对象编程</title>
+
+    <script>
+        //js不区分类和实例的概念,而是通过原型来实现面向对象编程
+
+        //robot原型
+        var robot = {
+            name:"Robot",
+            height:1.6,
+            run:function (){
+                console.log(this.name + "is running...");
+            }
+        };
+
+        //根据robot,改名为student
+        var Student = {
+            name:"Robot",
+            height:1.8,
+            run:function (){
+                console.log(this.name + "is running...");
+            }
+        };
+
+        var xiaoming = {
+            name:"小明"
+        };
+
+        xiaoming.__proto__ = Student;
+
+        //所有的对象都是实例,所谓继承关系不过是把一个对象的原型指向另一个对象而已.
+
+        var Bird = {
+            fly:function (){
+                console.log(this.name + "is flying...");
+            }
+        };
+
+        //不建议使用这种方式改变一个对象的原型
+        xiaoming.__proto__ = Bird;
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

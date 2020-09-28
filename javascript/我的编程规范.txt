@@ -1,0 +1,1 @@
+1. c/c++, python, javascript的字符串一律使用双引号.
