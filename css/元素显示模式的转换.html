@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>元素显示模式的转换</title>
+
+    <style>
+        a {
+            width: 500px;
+            height: 30px;
+            background-color: rgb(192, 92, 92);
+            text-decoration: none;
+
+            display: block;
+        }
+
+        div {
+            background-color: red;
+            display: inline;
+        }
+
+        span {
+            width: 200px;
+            height: 50px;
+            background-color: blue;
+            display: inline-block;
+        }
+    </style>
+</head>
+<body>
+    <a href="#">块级元素的转化</a>
+    <div>
+        块元素转为行级元素
+    </div>
+再增加文字的话,就不会另起一行了.
+
+<span>行内元素转为行内块元素</span>
+</body>
+</html>
