@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>后代选择器</title>
+
+    <style>
+        /* ul li {
+            color: pink;
+        }
+
+        ol li {
+            color: green;
+        }
+
+        /* 把ul -> li -> a 的文字改为红色 */
+/* 
+        ul li a {
+            color: red;
+        } 
+
+        .sec li a {
+            color: blue;
+        }
+
+        ol>li {
+            color: aqua;
+        } */ 
+
+        /* 并集选择器 */
+
+        ul,ol li a {
+            color: red;
+        }
+
+
+    </style>
+</head>
+<body>
+    <ul>
+        <li>li内部的内容</li>
+        <li>li内部的内容</li>
+        <li>li内部的内容</li>
+        <li>li内部的内容</li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+    </ul>
+    <ul class="sec">
+        <li>li内部的内容</li>
+        <li>li内部的内容</li>
+        <li>li内部的内容</li>
+        <li>li内部的内容</li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+        <li><a href="">li内部a的内容</a></li>
+    </ul>
+
+
+    <ol>
+        <li>ol内部的内容 儿子</li>
+        <li><a href="">孙子</a></li>
+    </ol>
+</body>
+</html>
