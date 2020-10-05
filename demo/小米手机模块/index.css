@@ -1,0 +1,73 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+a {
+    text-decoration: none;
+}
+
+body {
+    background-color: #f5f5f5;
+}
+
+h3 {
+    font-weight: 400;
+    font-size: 14px;
+    color: #333;
+}
+.box {
+    width: 1226px;
+    height: 615px;
+    /* background-color: pink; */
+    margin: 50px auto;
+}
+
+.box .left {
+    /* margin-right: 15px; */
+    float: left;
+    width: 234px;
+    height: 615px;
+}
+
+.box .right {
+    width: 992px;
+    height: 615px;
+    float: left;
+
+    /* background-color: skyblue; */
+}
+
+.box .right>div {
+    float: left;
+    width: 234px;
+    height: 300px;
+    background-color: #fff;
+    margin-left: 14px;
+    margin-bottom: 14px;
+}
+
+.box .right {
+    text-align: center;
+}
+
+.box .desc {
+    margin: 0 10px 10px;
+    height: 18px;
+    font-size: 12px;
+    color: #b0b0b0;
+}
+
+.box .price {
+    color: #ff6700;
+    margin: 0 10px 14px;
+}
+
+.box .left:hover {
+    box-shadow: 1px 1px 10px rgba(0,0,0,.3);
+}
+
+.box .right div:hover {
+    /* box-shadow: 1px 1px 10px rgba(0,0,0,.3); */
+    box-shadow: 0 0 5px rgba(0,0,0,.2);
+}
