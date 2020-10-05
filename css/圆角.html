@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>圆角&盒子阴影</title>
+
+    <style>
+        /* div {
+            width: 200px;
+            height: 50px;
+            background-color: green;
+            border-radius: 25px;
+        } */
+
+        div:hover {
+            box-shadow: 10px 10px 12px 5px rgba(0,0,0,.3);
+        }
+
+        .first {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: red;
+            margin: 0 20px;
+            border-radius: 100px;
+        }
+        .sec {
+            display:inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+            /* border-radius: 25px 10px 25px 40px; */
+            /* margin: 100px auto; */
+            /* box-shadow: 10px 10px 10px 10px rgba(0,0,0,.3); */
+            margin: 0 20px;
+        }
+
+        .third {
+            display: inline-block;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+            margin: 0 20px;
+        }
+        p {
+            box-shadow: 10px 10px 12px 6px black;
+        
+        }
+    </style>
+</head>
+<body>
+    <!-- <div></div> -->
+    
+    <div class="first"></div>
+    <div class="sec"></div>
+    <div class="third"></div>
+    <p>这是一个段落</p>
+</body>
+</html>
