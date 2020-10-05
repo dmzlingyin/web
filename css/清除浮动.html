@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>清除浮动</title>
+
+    <style>
+        .father {
+            width: 500px;
+            margin: 0 auto;
+            background-color: pink;
+            overflow: hidden;
+        }
+
+        .father .son {
+            float: left;
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        }
+
+        .father .son2 {
+            float: left;
+            width: 300px;
+            height: 400px;
+            background-color: green;
+        }
+
+        .ancle {
+            height: 200px;
+            /* width: 500px; */
+            background-color: black;
+        }
+    </style>
+</head>
+<body>
+    <div class="father">
+        <div class="son"></div>
+        <div class="son2"></div>
+    </div>
+    <div class="ancle">叔叔在这</div>
+    
+</body>
+</html>
