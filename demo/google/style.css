@@ -7,6 +7,7 @@ a {
     text-decoration: none;
     color: #333;
 }
+
 li {
     list-style: none;
 }
@@ -39,14 +40,14 @@ li {
 
 /* logo模块 */
 .logo {
-    width: 213px;
-    height: 72px;
+    width: 272px;
+    height: 92px;
     margin: 10px auto;
+    padding-top: 109px;
 }
 
 .logo img {
     width: 100%;
-    height: 100%;
 }
 
 .search {
@@ -103,10 +104,21 @@ li {
 
 .language {
     height: 28px;
-    /* background-color: pink; */
     text-align: center;
+    font-size: 13px;
+    color: #222222;
 }
 
 .language a {
     color: #1a0dbe;
+    padding-left: 10px;
+}
+
+.footer {
+    position: absolute;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    height: 41px;
+    background-color: #f2f2f2;
 }

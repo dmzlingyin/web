@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>定位</title>
+<!-- 
+    1. 静态定位
+    2. 相对定位         参考位置:自己(相对定位是给绝对定位当爹的)
+    3. 绝对定位         参考位置:祖先
+    4. 固定定位 -->
+
+    <style>
+        /* .first {
+            position: relative;
+            left: 200px;
+            width: 200px;
+            height: 200px;
+            background-color: pink;
+        }
+
+        .second {
+            width: 200px;
+            height: 200px;
+            background-color: skyblue;
+        } */
+
+        .first {
+            position: absolute;
+            bottom: 0;
+            left: 0;
+            width: 100%;
+            height: 200px;
+            background-color: pink;
+        }
+    </style>
+
+</head>
+<body>
+    <div class="first"></div>
+    <div class="second"></div>
+</body>
+</html>
