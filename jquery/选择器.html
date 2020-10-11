@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://cdn.staticfile.org/jquery/2.0.0/jquery.min.js"></script>
+
+    <!-- <script>
+       $(document).ready(function (){
+           $("button").click(function (){
+            $(this).hide();
+           });
+       });
+    </script> -->
+
+    <script>
+        $(document).ready(function (){
+            $("p:first").hover(function (){
+                // $(this).hide();
+                alert("您已进入中国领空");
+            },
+            function (){
+                alert("您已离开中国领空");
+            }
+            );
+        });
+    </script>
+</head>
+<body>
+    <p>中国</p>
+    <p>美国</p>
+</body>
+</html>

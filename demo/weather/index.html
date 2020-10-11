@@ -1,0 +1,244 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>天气</title>
+    <style>
+        * {
+            margin: 0px;
+            padding: 0px;
+            font-family: PingFangSC-Regular, Verdana, Arial, 微软雅黑, 宋体;
+            list-style: none;
+        }
+        .weather-container {
+            width: 240px;
+            height: 260px;
+            margin: 20px auto;
+            background: no-repeat;
+            background-size: cover;
+            border-radius: 5px;
+
+        }
+        .weather-header {
+            height: 20px;
+            width: 95%;
+            padding-top: 10px;
+            padding-left: 10px;
+            color: #ffffff;
+        }
+
+        .weather-header-city {
+            font-size: 16px;
+            float: left;
+        }
+        .weather-header-time {
+            font-size: 12px;
+            float: left;
+            margin-left: 10px;
+
+        }
+        .weather-content {
+            width: 100%;
+            height: 80px;
+            margin-top: 15px;
+            border-bottom: 1px solid white;
+        }
+        .weather-content-left {
+
+            padding-left: 0;
+            float: left;
+        }
+        .weather-content-left img {
+            width: 50px;
+            height: 50px;
+            text-align: center;
+            margin-top: 5px;
+        }
+        .weather-content-content {
+            margin-left: 5px;
+            float: left;
+            color: white;
+        }
+        .weather-content-content ul li {
+            width: 100%;
+            height: 25px;
+        }
+        .weather-content-content .tem {
+            font-size: 18px;
+        }
+        .weather-content-content .wea {
+            font-size: 14px;
+            margin-top: 16px;
+            width: 84px;
+            overflow: hidden;
+        }
+        .weather-content-right {
+
+            font-size: 12px;
+            color: white;
+            float: right;
+            margin-right: 10px;
+        }
+        .weather-content-right li {
+            height: 22px;
+        }
+        .weather-list {
+            width: 100%;
+            margin-top: 15px;
+            font-size: 12px;
+        }
+        .weather-list ul {
+            width: 33%;
+            float: left;
+        }
+        .weather-list ul li {
+            text-align: center;
+            color: white;
+            width: 79px;
+            overflow: hidden;
+        }
+        .weather-list ul li.text {
+            height: 20px;
+        }
+        .weather-list img {
+            width: 50px;
+            height: 50px;
+        }
+    </style>
+    <script src="./js/jquery.js"></script>
+</head>
+<body>
+<div class="weather-container tianqi_bg">
+    <div class="weather-header">
+        <div class="weather-header-city"><img style="width: 10px" src="./image/address.png">&nbsp;</div>
+        <div class="weather-header-time"></div>
+    </div>
+    <div class="weather-content">
+        <div class="weather-content-left tianqi_icon"></div>
+        <div class="weather-content-content">
+            <ul>
+                <li class="tem"></li>
+                <li class="wea"></li>
+            </ul>
+        </div>
+        <div class="weather-content-right">
+            <ul>
+                <li class="win"></li>
+                <li class="air_level"></li>
+                <li class="humidity"></li>
+            </ul>
+        </div>
+    </div>
+    <div class="weather-list"></div>
+</div>
+    <script>
+        getWeather();
+
+        function getWeather()
+        {
+            $.getJSON('https://v0.yiketianqi.com/api?version=v61&appid=75962557&appsecret=NvCfbYl2', function (result) {
+                var update_time = Date.parse(result.update_time);
+                update_time = getTime(update_time);
+                $('.tianqi_icon').html(setWeatherIcon(result.data[0].wea));
+                $('.tianqi_bg').css('background-image', setBgImg(result.data[0].wea));
+
+                $('.weather-header-city').append(result.city);
+                $('.weather-header-time').html(update_time+' 更新');
+                $('.weather-content-content .wea').html(result.data[0].wea);
+                $('.weather-content-content .tem').html(result.data[0].hours[0].tem);
+
+                $('.weather-content-right .win').html(result.data[0].hours[0].win+'&nbsp;'+result.data[0].hours[0].win_speed);
+                $('.weather-content-right .air_level').html('空气&nbsp;'+result.data[0].air_level);
+                $('.weather-content-right .humidity').html('相对湿度&nbsp;'+result.data[0].humidity);
+
+                $('.weather-list').html('');
+                var str = '';
+                var tianqi_icon = setWeatherIcon(result.data[0].wea);
+                var wea = result.data[0].wea;
+                var tem = result.data[0].hours[0].tem;
+                var week = '今天';
+                for (var i = 0; i < 3; i++)
+                {
+                    if (i > 0) {
+                        tianqi_icon = setWeatherIcon(result.data[i].hours[0].wea);
+                        week = result.data[i].week;
+                        wea = result.data[i].hours[0].wea;
+                        tem = result.data[i].hours[0].tem;
+                    }
+                    str +='<ul>\n' +
+                        '            <li>'+week+'</li>\n' +
+                        '            <li>'+tianqi_icon+'</li>\n' +
+                        '            <li class="text">'+wea+'</li>\n' +
+                        '            <li>'+tem+'</li>\n' +
+                        '        </ul>';
+                }
+                $('.weather-list').html(str);
+            })
+        }
+
+        // 根据天气设置背景图片
+        function setBgImg(wea)
+        {
+            var bg_img = '';
+            if (wea.indexOf("晴") >= 0) {
+                bg_img = 'url("./image/bg/qingtian.jpg"';
+            } else if (wea.indexOf("雷") >= 0) {
+                bg_img = 'url("./image/bg/lei.gif"';
+            } else if (wea.indexOf("雨") >= 0) {
+                bg_img = 'url("./image/bg/rain.gif"';
+            } else if (wea.indexOf("多云") >= 0) {
+                if (wea.indexOf("雨") >= 0) {
+                    bg_img = 'url("./image/bg/rain.gif"';
+                } else {
+                    bg_img = 'url("./image/bg/qingtian.jpg"';
+                }
+            } else {
+                bg_img = 'url("./image/bg/qingtian.jpg"';
+            }
+            return bg_img;
+        }
+
+        // 根据天气设置图标
+        function setWeatherIcon(wea)
+        {
+            var wea_img = '';
+            if (wea.indexOf("晴") >= 0) {
+                if (wea.indexOf("雨") >= 0) {
+                    wea_img = '<img src="./image/icon/clearr.png" />';
+                } else if (wea.indexOf("云") >= 0) {
+                    wea_img = '<img src="./image/icon/clear.png" />';
+                } else {
+                    wea_img = '<img src="./image/icon/sunny.png" />';
+                }
+            } else if (wea.indexOf("雷") >= 0) {
+                if (wea.indexOf("暴") >= 0) {
+                    wea_img = '<img src="./image/icon/blusteryr.png" />';
+                } else {
+                    wea_img = '<img src="./image/icon/blustery.png" />';
+                }
+            } else if (wea.indexOf("雨") >= 0) {
+                if (wea.indexOf("晴") >= 0) {
+                    wea_img = '<img src="./image/icon/clearr.png" />';
+                } else {
+                    wea_img = '<img src="./image/icon/rainy.png" />';
+                }
+            } else {
+                wea_img = '<img src="./image/icon/cloudy.png" />';
+            }
+            return wea_img;
+        }
+        
+        function getTime(timestamp)
+        {
+            var date = new Date(timestamp);
+            //var Y = date.getFullYear() + '-';
+            //var M = (date.getMonth()+1 < 10 ? '0'+(date.getMonth()+1) : date.getMonth()+1) + '-';
+            //var D = (date.getDate() < 10 ? '0' + (date.getDate()) : date.getDate()) + ' ';
+            var h = (date.getHours() < 10 ? '0' + date.getHours() : date.getHours()) + ':';
+            var m = (date.getMinutes() <10 ? '0' + date.getMinutes() : date.getMinutes());
+            //var s = (date.getSeconds() <10 ? '0' + date.getSeconds() : date.getSeconds());
+            return h+m;
+        }
+    </script>
+</body>
+</html>
