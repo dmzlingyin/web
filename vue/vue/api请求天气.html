@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>请求天气</title>
+    <script src="https://cdn.jsdelivr.net/vue/latest/vue.js"></script>
+    <script src="//cdn.bootcss.com/vue-resource/1.0.3/vue-resource.js"></script>
+</head>
+
+<body>
+    <div id="app"></div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                peps: ''
+            },
+            mounted: function () {
+                this.getJsonInfo();
+            },
+            methods: {
+                getJsonInfo: function () {
+                    this.$http.get('https://api.seniverse.com/v3/weather/daily.json?key=S4cvyxZ4wWUni59k4&location=ip&language=zh-Hans&unit=c&start=0&days=5').then(function(response){
+                        console.log(response.results);
+                    })
+                }
+            }
+        });
+    </script>
+</body>
+
+</html>

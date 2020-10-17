@@ -51,6 +51,7 @@ li {
 }
 
 .search {
+    position: relative;
     height: 140px;
     /* background-color: pink; */
     margin: 20px 0;
@@ -67,6 +68,22 @@ li {
 
 .search .out:hover {
     box-shadow: 0 0 3px 1px rgba(0,0,0,.3);
+}
+
+.search .search_logo {
+    float: left;
+    width: 30px;
+    height: 30px;
+    padding: 10px 0 0 20px;
+}
+
+.search .mico_logo {
+    position: absolute;
+    top: 2px;
+    right: 2px;
+    width: 30px;
+    height: 30px;
+    /* padding-right: 20px; */
 }
 .search .out input {
     width: 487px;
@@ -121,4 +138,28 @@ li {
     width: 100%;
     height: 41px;
     background-color: #f2f2f2;
+}
+
+.footer .left {
+    float: left;
+    font-size:14px;
+    color:#5f6368;
+    line-height: 41px;
+}
+
+.footer .left li {
+    float: left;
+    padding-left: 30px;
+}
+
+.footer .right {
+    float: right;
+    font-size: 14px;
+    color: #5f6368;
+    line-height: 41px;
+}
+
+.footer .right li {
+    float: right;
+    padding-right: 30px;
 }
