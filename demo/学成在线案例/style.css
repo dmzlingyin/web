@@ -32,7 +32,9 @@ li {
     height: 42px;
     /* background-color: green; */
 }
-
+.user-logo {
+    vertical-align: middle;
+}
 .nav {
     float: left;
     margin-left: 60px;

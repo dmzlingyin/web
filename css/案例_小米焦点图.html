@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>案例_小米焦点图</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        li {
+            list-style: none;
+        }
+        .mi-promo {
+            position: relative;
+            width: 1226px;
+            height: 460px;
+            margin: 100px auto;
+        }
+        .prev,
+        .next {
+            position: absolute;
+            top: 50%;
+            margin-top: -15px;
+            width: 20px;
+            height: 30px;
+            text-align: center;
+            height: 30px;
+            background-color: rgba(0,0,0,.3);
+            text-decoration: none;
+        }
+        .prev {
+            left: 0;
+            border-radius: 0 15px 15px 0;
+        }
+        .next {
+            right: 0;
+            border-radius: 15px 0 0 15px;
+        }
+        .promo-nav {
+            position: absolute;
+            bottom: 10px;
+            left: 50%;
+            margin-left: -35px;
+            width: 70px;
+            height: 13px;
+            background-color: rgba(255,255,255,.3);
+            border-radius: 7px;
+        }
+        .promo-nav li {
+            float: left;
+            width: 8px;
+            height: 8px;
+            background-color: #fff;
+            border-radius: 4px;
+            margin: 3px;
+        }
+        .promo-nav .selected {
+            background-color: #ff5000;
+        }
+    </style>
+</head>
+<body>
+    <div class="mi-promo">
+        <img src="../sources/master.jpg" alt="">
+        <a class="prev" href="#">&lt</a>
+        <a class="next" href="#">&gt</a>
+        <ul class="promo-nav">
+            <li class="selected"></li>
+            <li></li>
+            <li></li>
+            <li></li>
+            <li></li>
+        </ul>
+
+    </div>
+</body>
+</html>

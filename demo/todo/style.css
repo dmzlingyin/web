@@ -29,6 +29,7 @@ body {
     padding-left: 10px;
 }
 #app ul li {
+    position: relative;
     list-style: none;
     width: 780px;
     height: 40px;
@@ -40,7 +41,6 @@ body {
     margin: 10px auto;
     padding-left: 20px;
 }
-
 .delete {
     float: right;
     width: 30px;
@@ -49,3 +49,13 @@ body {
     margin-right: 3px;
     cursor: pointer;
 }
+.set-time {
+    position: absolute;
+    top: 0;
+    left: 50%;
+
+}
+.set-time input {
+    width: 100px;
+}
+

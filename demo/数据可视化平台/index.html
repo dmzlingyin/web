@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>数据可视化</title>
+    <link rel="stylesheet" href="./css/index.css">
+</head>
+
+<body>
+    <!-- 头部盒子 -->
+    <header>
+        <h1>数据可视化-Echarts</h1>
+        <div class="showTime"></div>
+    </header>
+
+    <!-- 页面主体部分 -->
+    <section class="mainbox">
+        <div class="column">
+            <div class="panel">
+                <div class="panel-footer"></div>
+            </div>
+        </div>
+        <div class="column">2</div>
+        <div class="column">3</div>
+    </section>
+    <script>
+        var t = null;
+        t = setTimeout(time, 1000);
+        function time() {
+            clearTimeout(t);
+            dt = new Date();
+            var y = dt.getFullYear();
+            var mt = dt.getMonth() + 1;
+            var day = dt.getDate();
+            var h = dt.getHours();
+            var m = dt.getMinutes();
+            var s = dt.getSeconds();
+            document.querySelector(".showTime").innerHTML = '当前时间：' + y + "年" + mt + "月" + day + "日" + "-" + h + "时" + m + "分" + s + "秒";
+            t = setTimeout(time,1000);
+        }
+    </script>
+    <script src="./js/flexible.js"></script>
+</body>
+
+</html>

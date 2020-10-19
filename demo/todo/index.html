@@ -12,13 +12,16 @@
 
     <div id="app">
         <div class="header">
-            <input type="text" placeholder="请输入代办事项" @keyup.enter="addEvent" v-model="addedEvent">
+            <input type="text" placeholder="请输入代办事项" autofocus="autofocus" @keyup.enter="addEvent" v-model="addedEvent">
         </div>
        
         <ul>
             <template v-for="(event,index) in events">
                 <li>
                     {{ event }}
+                    <div class="set-time">
+                        <input type="time" v-model="timeList[index]">
+                    </div>
                     <img class="delete" :src="deleteLogo" alt="" @click="deleteEvent(index)">
                 </li>    
             </template>

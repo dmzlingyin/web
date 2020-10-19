@@ -3,6 +3,7 @@ var app = new Vue({
     data:{
         events:["喝水","吃饭","睡觉"],
         addedEvent:'',
+        timeList:[],
         deleteLogo:"E:/web/sources/delete.png"
     },
     methods:{
