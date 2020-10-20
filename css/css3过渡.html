@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>css3过渡</title>
+    <style>
+        .box1 {
+            width: 200px;
+            height: 100px;
+            margin: 100px auto;
+            background-color: rgba(0,0,0,.7);
+            transition: width 1s;
+        }
+        .box1:hover {
+            width: 300px;
+        }
+        .box2 {
+            width: 300px;
+            height: 200px;
+            margin: 20px auto;
+            background-color: skyblue;
+            transition: box-shadow .2s ease-in-out;
+            /* transition: box-shadow .2s linear; */
+        }
+        .box2:hover {
+            box-shadow: 2px 2px 5px 3px rgba(0,0,0,.6);
+        }
+    </style>
+</head>
+<body>
+    <div class="box1"></div>
+    <div class="box2"></div>
+</body>
+</html>
