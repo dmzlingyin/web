@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>简易音乐播放器</title>
+
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://unpkg.com/axios/dist/axios.min.js"></script>
+</head>
+<body>
+    <div id="player">
+        <!-- 搜索框 start -->
+        <div class="search">
+            <input type="search" placeholder="请输入歌曲名称" v-model="song" @keyup.enter="getSongInfo">
+            <button @click="getSongInfo">搜索</button>
+        </div>
+        <!-- 搜索框 end -->
+
+        <!-- 显示框 start -->
+        <div class="show">
+            <ul>
+                <li v-for="(song,index) in songList">
+                    {{ index + 1 }}&nbsp;&nbsp;
+                    <img src="images/play.png" alt="jkj" @click="getSongUrl(index)">
+                    
+                    {{ song.name }}
+                </li>
+            </ul>
+        </div>
+        <!-- 显示框 end -->
+        <!-- 播放框 start -->
+        <div class="play">
+            <audio :src="url" controls autoplay="autoplay"></audio>
+        </div>
+        <!-- 播放框 end -->
+    </div>
+    <script src="main.js"></script>
+</body>
+</html>

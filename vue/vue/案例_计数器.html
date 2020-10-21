@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>计数器</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+
+        #app {
+            width: 180px;
+            height: 30px;
+            margin: 20px auto;
+            background-color: rgba(0,0,0,.3);
+        }
+
+        .dec {
+            float: left;
+            width: 58px;
+            height: 28px;
+            text-align: center;
+            border: 1px solid #333;
+            line-height: 28px;
+            background-color: pink;
+            color: black;
+            cursor: pointer;
+        }
+
+        .num {
+            float: left;
+            width: 56px;
+            height: 26px;
+            line-height: 26px;
+            text-align: center;
+            border: 2px solid #333;
+            background-color: #fff;
+        }
+        .plus {
+            float: left;
+            width: 58px;
+            height: 28px;
+            text-align: center;
+            border: 1px solid #333;
+            background-color: skyblue;
+            line-height: 28px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+
+    <div id="app">
+        <div class="dec" @click="dec">-</div>
+        <div class="num">{{ num }}</div>
+        <div class="plus" @click="plus">+</div>
+    </div>
+    <!-- 导入开发环境 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                num:0
+            },
+
+            methods:{
+                dec:function (){
+                    this.num --;
+                },
+                plus:function (){
+                    this.num ++;
+                }
+            }
+        })
+    </script>
+</body>
+</html>

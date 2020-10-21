@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>vue基础</title>
+
+    <style>
+        a {
+            text-decoration: none;
+        }
+
+        li {
+            list-style: none;
+        }
+    </style>
+</head>
+<body>
+    
+    <div id="app">
+        {{ message }}
+        <a href="#">{{ school.name }}</a>
+        <a href="#">{{ school.address }}</a>
+
+        <ul>
+            <li>{{ campus[0] }}</li>
+            <li>{{ campus[1] }}</li>
+        </ul>
+    </div>
+    <!-- 导入开发环境 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                message:"lingyin 你好",
+                school:{
+                    name:"防灾科技学院",
+                    address:"燕郊经济开发区"
+                },
+                campus:["南区","北区"]
+            }
+        });
+    </script>
+</body>
+</html>

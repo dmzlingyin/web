@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-IF指令</title>
+
+
+</head>
+<body>
+    <div id="app">
+        <p v-if="isShow">
+            <!-- {{ }} -->
+            老黑
+        </p>
+
+        <h2 v-if="tmp>35">太他妈热了</h2>
+        <h2 v-else>
+            不热
+        </h2>
+        <input type="button" value="切换显示" @click="toggleIsShow">
+    </div>
+    <!-- 导入 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                isShow: false,
+                tmp:36
+            },
+            methods:{
+                toggleIsShow:function (){
+                    this.isShow = !this.isShow;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

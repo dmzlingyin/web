@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>V-Show</title>
+
+   
+</head>
+<body>
+
+    <div id="app">
+        <input type="button" value="切换" @click="change">
+        <img src="./jm.jpg" alt="" v-show="isShow">
+        <!-- <img src="./jm.jpg" alt="" v-show="age>18"> -->
+    </div>
+    <!-- 导入开发环境 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                isShow:true,
+                // isShow:false,
+                // age:19
+            },
+            methods:{
+                change:function (){
+                    this.isShow = !this.isShow;
+                }
+            },
+        })
+    </script>
+</body>
+</html>

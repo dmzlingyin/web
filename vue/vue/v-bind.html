@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-bind使用</title>
+    <style>
+        .active {
+            border: 2px solid red;
+        }
+    </style>
+</head>
+<body>
+    <div id="app">
+        <!-- <img src="./jm.jpg" alt=""> -->
+        <!-- <img v-bind:src="imgSrc" v-bind:title="imgTitle"> -->
+        <img :src="imgSrc" :title="imgTitle" :class={active:isActive} @click="toggleActive"> 
+    </div>
+    <!-- 导入开发环境 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                imgSrc:"./jm.jpg",
+                imgTitle:"你好啊",
+                isActive:false
+            },
+            methods:{
+                toggleActive:function (){
+                    this.isActive = !this.isActive;
+                }
+            }
+        });
+    </script>
+</body>
+</html>

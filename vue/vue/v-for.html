@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>v-for使用</title>
+</head>
+<body>
+    <div id="app">
+        <ul>
+            <!-- <li v-for="(index,item) in arr">
+                {{ index }} {{ item }}
+            </li> -->
+            <li v-for="item in person">
+                {{ item.name }}
+            </li>
+        </ul>
+    </div>
+    <!-- 导入 -->
+    <script src="https://cdn.jsdelivr.net/npm/vue/dist/vue.js"></script>
+
+    <script>
+        var app = new Vue({
+            el:"#app",
+            data:{
+                arr:[1,2,3,4,5],
+                person:[{name:"lingyin"},
+                {name:"lvwenchao"},
+                {name:"lvwenhuan"}] 
+            },
+            
+        });
+    </script>
+</body>
+</html>

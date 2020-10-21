@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <script src="https://cdn.staticfile.org/vue/2.4.2/vue.min.js"></script>
+    <script src="https://cdn.staticfile.org/axios/0.18.0/axios.min.js"></script>
+</head>
+
+<body>
+    <div id="app">
+        <input type="button" value="get" @click="getJson">
+        <p>
+            返回数据:{{ response }}
+        </p>
+    </div>
+
+    <script>
+        var app = new Vue({
+            el: "#app",
+            data: {
+                response:'你好'
+            },
+            methods: {
+                getJson() {
+                    // console.log(this.response)
+                    var that = this;
+                    axios.get("https://autumnfish.cn/api/joke").then(function (data) {
+                        that.response = data.data;
+                        // console.log(this.response);
+                    });
+                }
+            }
+
+        });
+    </script>
+</body>
+
+</html>
