@@ -10,25 +10,22 @@ body {
     background-color: #f3f4f6;
 }
 .search {
+    width: 500px;
     height: 40px;
+    margin: 10px auto;
     /* background-color: pink; */
 }
 .search input {
-    position: absolute;
-    top: 5px;
+    float: left;
     width: 300px;
     height: 38px;
-    left: 50%;
-    margin-left: -150px;
     border-radius: 10px 0 0 10px;
     padding-left: 20px;
     border: none;
     outline: none;
 }
 .search button {
-    position: absolute;
-    top: 5px;
-    left: 830px;
+    float: left;
     height: 38px;
     width: 60px;
     border-radius: 0 10px 10px 0;
@@ -45,10 +42,10 @@ body {
 }
 .show {
     position: absolute;
-    top: 50px;
-    left: 540px;
-    width: 320px;
+    left: 720px;
+    width: 350px;
     max-height: 500px;
+    margin: 10px auto;
     color: rgb(17, 16, 16);
     font-size: 16px;
     border-radius: 10px;
@@ -58,7 +55,7 @@ body {
 
 .show ul li {
     height: 40px;
-    padding-left: 10px;
+    padding-left: 20px;
     line-height: 40px;
     border-bottom: 1px solid #f3f4f6;
     overflow: hidden;

@@ -11,9 +11,10 @@
         <div class="show">
             <ul>
                 <li v-for="(song,index) in songList" :key="song">
-                    {{ index + 1 }}&nbsp;&nbsp;
+                    {{ index + 1 }}
+                    &nbsp;&nbsp;
                     <img src="./assets/play.png" alt="jkj" @click="getSongUrl(index)">
-                    
+                    &nbsp;
                     {{ song.name }}
                 </li>
             </ul>
