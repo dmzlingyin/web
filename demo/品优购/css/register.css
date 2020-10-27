@@ -1,0 +1,141 @@
+.w {
+    width: 1200px;
+    margin: 0 auto;
+}
+header {
+    height: 84px;
+    border-bottom: 2px solid #c81523;
+}
+.logo img {
+    padding-top: 18px;
+}
+.registerarea {
+    height: 500px;
+    margin-top: 20px;
+    border: 1px solid #ccc;
+
+}
+.box-hd {
+    height: 40px;
+    background-color: #f0f0f0;
+    line-height: 40px;
+    padding: 0 10px;
+    border-bottom: 1px solid #ccc;
+}
+.left {
+    float: left;
+    font-size: 16px;
+}
+.right {
+    float: right;
+    font-size: 14px;
+}
+.right a {
+    color: red;
+}
+.box-bd {
+    width: 700px;
+    /* background-color: pink; */
+    margin: 50px auto 0;
+}
+.box-bd label {
+    display: inline-block;
+    width: 88px;
+    text-align: right;
+    font-size: 14px;
+}
+.box-bd ul li {
+    margin-top: 20px;
+}
+.box-bd ul li .inp {
+    width: 242px;
+    height: 37px;
+    border: 1px solid #ccc;
+}
+.error {
+    margin-left: 10px;
+    color: red;
+}
+.success {
+    margin-left: 10px;
+    color: green;
+}
+.error_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/error.png) no-repeat;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+.success_icon {
+    display: inline-block;
+    width: 20px;
+    height: 20px;
+    background: url(../images/success.png) no-repeat;
+    vertical-align: middle;
+    margin-top: -2px;
+    margin-right: 5px;
+}
+.safe {
+    padding-left: 130px;
+}
+.safe em {
+    padding: 0 12px;
+    margin-right: 5px;
+}
+.wake {
+    background-color: #de1111;
+}
+.middle {
+    background-color: #40b83f;
+}
+.strong {
+    background-color: #f79100;
+}
+.agree {
+    padding-left: 150px;
+}
+.agree input {
+    vertical-align: middle;
+    margin-right: 5px;
+}
+.agree a {
+    color: #1ba1e6;
+}
+.agree a:hover {
+    color: #de1111;
+}
+.btn {
+    width: 200px;
+    height: 34px;
+    background-color: #c81623;
+    font-size: 16px;
+    color: #fff;
+    margin: 30px 0 0 70px;
+}
+footer {
+    position: absolute;
+    width: 100%;
+    background-color: #f0f0f0;
+    bottom: 10px;
+    padding-left: 20%;
+}
+.mod_copyright {
+    text-align: center;
+    padding-top: 20px;
+}
+.mod_copyright .links a {
+    display: inline-block;
+    border-right: 1px solid #ccc;
+    padding-right: 10px;
+    margin-right: 10px;
+
+}
+.mod_copyright .links a:last-child {
+    border: none;
+}
+.mod_copyright .copyright p:first-child {
+    margin: 10px 0;
+}

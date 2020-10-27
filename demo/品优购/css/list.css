@@ -1,0 +1,109 @@
+/* 列表页专有css */
+.nav {
+    overflow: hidden;
+}
+.sk {
+    position: absolute;
+    top: 15px;
+    left: 190px;
+    margin-left: 10px;
+    padding-left: 20px;
+    border-left: 1px solid rgb(141, 18, 18);
+}
+.sk_list {
+    float: left;
+    text-align: center;
+}
+.sk_list ul li {
+    float: left;
+    /* text-align: center; */
+}
+.sk_list ul li a {
+    display: block;
+    line-height: 47px;
+    padding: 0 30px;
+    font-size: 16px;
+    font-weight: 700;
+}
+.sk_con {
+    float: left;
+}
+.sk_con ul li {
+    float: left;
+}
+.sk_con ul li a {
+    display: block;
+    line-height: 49px;
+    padding-left: 30px;
+    font-size: 14px;
+}
+.sk_con ul li:last-child a::after {
+    content: '\e91e';
+    font-family: 'icomoon';
+}
+.sk_bd {
+    overflow: hidden;
+    text-align: center;
+}
+.sk_bd ul {
+    padding-left: 5px;
+}
+.sk_bd ul li {
+    position: relative;
+    float: left;
+    width: 290px;
+    height: 460px;
+    /* background-color: pink; */
+    border: 1px solid #ccc;
+    margin-top: 10px;
+    margin-right: 10px;
+}
+.sk_bd ul li:hover {
+    border: 1px solid red;
+}
+.sk_bd ul li:nth-child(4n) {
+    margin-right: 0;
+}
+.sk_bd ul li img {
+    margin: 20px auto;
+}
+.sk_bd ul li p {
+    color: #b0b0b0;
+    overflow: hidden;
+    margin-top: 10px;
+    padding: 0 10px;
+    white-space: nowrap;
+    text-overflow: ellipsis;
+}
+.sk_bd .price {
+    color: #ff6700;
+    /* text-align: center; */
+}
+.num {
+    font-size: 12px;
+    margin: 15px 0;
+}
+.num .process {
+    display: inline-block;
+    width: 130px;
+    height: 10px;
+    margin: 0 5px;
+    background-color: pink;
+    border-radius: 5px;
+}
+/* .num .process::before {
+    height: 100%;
+    width: 150px;
+    background-color: red;
+} */
+.grab {
+    position: absolute;
+    bottom: 0;
+    font-size: 18px;
+    text-align: center;
+    line-height: 50px;
+    color: #fff;
+    width: 100%;
+    height: 50px;
+    background-color: #bf2618;
+}
