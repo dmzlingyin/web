@@ -32,55 +32,79 @@
             <div class="weather">
                 <ul>
                     <li v-for="item in weather">
-                        <p>{{ item.date}}</p>
+                        <!-- <p>{{ item.date}}</p> -->
                         <div class="dayweather" v-if="sun.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <span></span>
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
+
                         </div>
                         <div class="dayweather" v-else-if="cloud.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/yun.gif" alt=""> -->
-                            <span></span>
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
+
                         </div>
                         <div class="dayweather" v-else-if="wind.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/taifeng.gif" alt=""> -->
-                            <span></span>
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
+
                         </div>
                         <div class="dayweather" v-else-if="haze.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/wu.gif" alt=""> -->
-                            <span></span>
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
                         </div>
                         <div class="dayweather" v-else-if="shower.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/zhenyu.gif" alt=""> -->
-                            <span></span>
+
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
                         </div>
                         <div class="dayweather" v-else-if="rain.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/yu.gif" alt=""> -->
-                            <span></span>
+
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
                         </div>
                         <div class="dayweather" v-else-if="snow.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/xue.gif" alt=""> -->
-                            <span></span>
+
+
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
                         </div>
                         <div class="dayweather" v-else-if="dust.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/shachen.gif" alt=""> -->
-                            <span></span>
+
+
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
                         </div>
                         <div class="dayweather" v-else-if="fog.indexOf(item.dayweather)>-1">
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/wu.gif" alt=""> -->
-                            <span></span>
+
+
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
                         </div>
                         <div class="dayweather" v-else>
-                            {{ item.dayweather }}
-                            <!-- <img src="./images/wu.gif" alt=""> -->
-                            <span></span>
+
+
+                            <span class="weather_icon"></span>
+                            <div>
+                                {{ item.dayweather }}
+                            </div>
                         </div>
                         <div class="temp">
                             {{ item.daytemp}}℃/{{ item.nighttemp }}℃
@@ -90,9 +114,6 @@
             </div>
         </div>
 
-        <div class="font">
-            <span></span>
-        </div>
     </div>
 
 
