@@ -1,0 +1,44 @@
+header img {
+    position: absolute;
+    top: 0;
+    width: 100%;
+    height: 80px;
+    background-position: 50%;
+    background-repeat: no-repeat;
+    margin: 0;
+}
+.nav {
+    position: relative;
+    top: 80px;
+    z-index: 30;
+    height: 40px;
+    background-color: #333;
+    color: #b0b0b0;
+}
+.topbar-nav {
+    position: absolute;
+    top: 0;
+    left: 60px;
+}
+.topbar-nav ul {
+    float: left;
+}
+.topbar-nav ul li {
+    float: left;
+}
+.topbar-nav ul li a {
+    display: inline-block;
+    height: 20px;
+    margin-right: 10px;
+    font-size: 12px;
+    border-right: 1px solid rgb(17, 12, 12);
+    padding-right: 10px;
+    margin: 13px 0;
+    margin-right: 10px;
+    color: #b0b0b0;
+}
+.topbar-nav ul li:last-child a {
+    border: none;
+}
+
+

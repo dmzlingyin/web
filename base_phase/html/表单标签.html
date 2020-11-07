@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>表单标签</title>
+</head>
+<body>
+    <!-- 表单作用:收集用户信息,提交给服务器-->
+    <form action="index.php" method="get">
+        用户名: <input type="text" name="username" value="请输入用户名"> <br>
+        密  码: <input type="password" name="password"> <br>
+
+        <!-- 单选框的name属性必须相同 -->
+        性  别: 男 <input type="radio" name="gender" checked="checked"> 女 <input type="radio" name="gender"> <br>
+        爱  好: 抽烟 <input type="checkbox"> 喝酒 <input type="checkbox" checked="checked"> 烫头 <input type="checkbox"><br>
+
+        <!-- submit用来提交数据 -->
+        <span><input type="submit" value="注册"></span>
+        <span><input type="reset" value="重新填写"></span>
+        <br>
+
+        <!-- 按钮 不提交数据 -->
+        <input type="button" value="按钮">
+        <br>
+
+        <!-- 文件对话框 -->
+        <input type="file">
+        <br>
+        <br>
+        <!-- label标签 增加用户体验 -->
+        <!-- for 和 id 要绑定 -->
+        <label for="man">男生</label>
+        <input type="radio" name="sex" id="man">
+
+        <label for="woman">女生</label>
+        <input type="radio" name="sex" id="woman">
+
+    </form>
+
+</body>
+</html>

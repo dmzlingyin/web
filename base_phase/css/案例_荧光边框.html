@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+        }
+        body {
+            background-color: #000;
+        }
+
+        .box {
+            position: relative;
+            width: 300px;
+            height: 400px;
+            background-color: #1e1e1e;
+            margin: 40px auto;
+            box-shadow: 0 0 10px 3px #3bcc47;
+            color:#fff;
+        }
+
+        .left {
+            float: left;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            margin-top: 200px;
+        }
+        
+        .right {
+            float: right;
+            width: 20px;
+            height: 20px;
+            background-color: pink;
+            margin-top: 200px;
+        }
+
+        .midum {
+            position: absolute;
+            bottom: 0;
+            left: 50%;
+            margin-left: -10px;
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="left">左</div>
+        <div class="right">右</div>
+        <div class="midum">中</div>
+    </div>
+</body>
+</html>
