@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>高德地图快速上手</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ecbba8de15f037e9255b1dcb342249ef"></script>
+    <style>
+        #container {
+            width: 1366px;
+            height: 768px;
+            margin: 0 auto;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+
+    </div>
+
+    <script>
+        var map = new AMap.Map('container',{
+            zoom: 11,center: [116.397428,39.93923]
+        });
+
+        //添加实时路况图层
+        // var trafficLayer = new AMap.TileLayer.Traffic({
+        //     zIndex: 10
+        // });
+        // map.add(trafficLayer);
+
+        //创建信息窗体
+        var infoWindow = new AMap.InfoWindow({
+            isCustom: true,
+            content: '<div>信息窗体</div>',
+            offset: new AMap.Pixel(16,-45)
+        });
+        var onMarkerClick = function(e) {
+            infoWindow.open(map,e.target.getPosition());
+        }
+
+        //添加标记点
+        var marker = new AMap.Marker({
+            position: [116.481181,39.989792]
+        });
+        map.add(marker);
+        marker.on('click',onMarkerClick);
+    </script>
+</body>
+</html>

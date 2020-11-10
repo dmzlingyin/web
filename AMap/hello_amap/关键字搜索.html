@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>关键字搜索</title>
+    <script type="text/javascript" src="https://webapi.amap.com/maps?v=1.4.15&key=ecbba8de15f037e9255b1dcb342249ef"></script>
+    <script type="text/javascript" src="https://cache.amap.com/lbs/static/addToolbar.js"></script>
+    <style>
+        #container {
+            width: 1900px;
+            height: 980px;
+        }
+        #panel {
+            position: absolute;
+            background-color: pink;
+            top: 10px;
+            right: 10px;
+            width: 280px;
+            height: 200px;
+        }
+    </style>
+</head>
+<body>
+    <div id="container">
+    </div>
+    <div id="panel"></div>
+
+    <script>
+        //实例化地图
+        var map = new AMap.Map('container',{
+            zoom: 11,
+            center: [116.397428,39.93923],
+            resizeEnable: true
+        });
+        
+        AMap.service(["AMap.PlaceSearch"],function() {
+            //构造地点查询类
+            var placeSearch = new AMap.PlaceSearch({
+                pageSize: 5,
+                pageIndex: 1,
+                city: "010",
+                citylimit: false,
+                map: map,
+                panel: "panel",
+                autoFitView: true
+            });
+            placeSearch.search("河北科技大学");
+        });
+    </script>
+
+</body>
+</html>
