@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>旋转案例</title>
+    <style>
+        .parent {
+            margin: 50px auto;
+            width: 80px;
+            height: 80px;
+        }
+
+        .parent {
+            overflow: hidden;
+            background-color: rgb(100, 104, 104);
+        }
+
+        .parent::before {
+            content: "hello";   
+            display: block;
+            width: 100%;
+            height: 100%;
+            transform-origin: left bottom;
+            transform: rotate(90deg);
+            transition: all .5s;
+        }
+        .parent:hover::before {
+            transform: rotate(0deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="parent">
+    
+    </div>
+</body>
+</html>
