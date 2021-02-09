@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>翻转盒子案例</title>
+    <style>
+        body {
+            perspective: 400px;
+        }
+        .box {
+            position: relative;
+            perspective: 500px;
+            width: 300px;
+            height: 300px;
+            /* border: 1px solid #333; */
+            margin: 30px auto;
+            transform-style: preserve-3d;
+            transition: all 1s;
+        }
+        .box:hover {
+            transform: rotateY(180deg);
+        }
+        .font,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 300px;
+        }
+
+        .font {
+            background-color: pink;
+            z-index: 1;
+        }
+        .back {
+            background-color: skyblue;
+            transform: rotateY(180deg);
+        }
+    </style>
+</head>
+<body>
+    <div class="box">
+        <div class="font">正面</div>
+        <div class="back">反面</div>
+    </div>
+</body>
+</html>

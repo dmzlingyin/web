@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            list-style: none;
+        }
+        ul {
+            margin: 100px;
+        }
+        ul li {
+            width: 120px;
+            height: 35px;
+            perspective: 400px;
+        }
+        ul li .box {
+            position: relative;
+            width: 100%;
+            height: 100%;
+            background-color: pink;
+            transform-style: preserve-3d;
+            transition: all .5s;
+        }
+        ul li .box:hover {
+            transform: rotateX(90deg);
+        }
+        .font,
+        .back {
+            position: absolute;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            text-align: center;
+            line-height: 35px;
+        }
+        .font {
+            background-color: pink;
+            z-index: 1;
+            transform: translateZ(17.5px);
+        }
+        .back {
+            background-color: skyblue;
+            transform: translateY(50%) rotateX(-90deg);
+        }
+    </style>
+</head>
+<body>
+    <ul>
+        <li>
+            <div class="box">
+                <div class="font">Hello啊</div>
+                <div class="back">树哥</div>
+            </div>
+        </li>
+    </ul>
+</body>
+</html>

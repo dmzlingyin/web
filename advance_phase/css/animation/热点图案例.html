@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>热点图</title>
+    <style>
+        body {
+            background-color: #333;
+        }
+        .map {
+            position: relative;
+            margin: 50px auto;
+            width: 600px;
+            height: 307px;
+            background: url(../../world-map.png);
+        }
+        .city {
+            position: absolute;
+            top: 140px;
+            left: 330px;
+            color: red;
+        }
+        .dotted {
+            width: 8px;
+            height: 8px;
+            background-color: rgb(59, 49, 197);
+            border-radius: 50%;
+        }
+        .city div[class^="pulse"] {
+            position: absolute;
+            top: 50%;
+            left: 50%;
+            transform: translate(-50%, -50%);
+            border-radius: 50%;
+            width: 8px;
+            height: 8px;
+            box-shadow: 0 0 12px rgb(59, 49, 197);
+            /* animation-name: plus;
+            animation-duration: 1.2s;
+            animation-iteration-count: infinite; */
+            animation: plus 2.2s linear infinite;
+        }
+        .city div.pulse2 {
+            animation-delay: 0.8s;
+        }
+        .city div.pulse3 {
+            animation-delay: 1.6s;
+        }
+        @keyframes plus {
+            0% {
+
+            }
+            75% {
+                width: 40px;
+                height: 40px;
+                opacity: 0.6;
+            }
+            100% {
+                width: 70px;
+                height: 70px;
+                opacity: 0;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="map">
+        <div class="city">
+            <div class="dotted"></div>
+            <div class="pulse1"></div>
+            <div class="pulse2"></div>
+            <div class="pulse3"></div>
+        </div>
+    </div>
+</body>
+</html>
